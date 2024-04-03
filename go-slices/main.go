@@ -63,4 +63,17 @@ func main() {
 	fmt.Printf("Address of slice is : %p\n", slice)
 	fmt.Println("Length:", len(slice))
 	fmt.Println("Capacity:", cap(slice))
+	//delete a element
+	fmt.Println(slice)
+	slice = append(slice[0:2], slice[3:]...)
+	fmt.Println(slice)
+
+	slice = deleteNthElement(slice, 2)
+	fmt.Println(slice)
+
+}
+
+func deleteNthElement(s []int, n int) []int {
+	s = append(s[0:n], s[n+1:]...)
+	return s
 }
