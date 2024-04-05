@@ -23,7 +23,7 @@ loop:
 
 		switch strings.TrimSpace(choice) {
 		case "1":
-			menu.PrintMenu()
+			menu.Print()
 		case "2":
 			menu.AddItem()
 		case "q":
